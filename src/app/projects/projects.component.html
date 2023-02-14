@@ -1,0 +1,19 @@
+<section-title>Projetos</section-title>
+
+<div class="projects-cards">
+	<div class="big-card" *ngFor="let card of cardsInfos">
+		<img [src]="card.imageUrl" alt="Imagem do projeto" width="381" height="280" />
+
+		<div>
+			<h3>
+				{{ card.title }}
+			</h3>
+
+			<p>
+				{{ card.description }}
+			</p>
+
+			<p>Tecnologias: {{ card.technologiesUsed }}</p>
+		</div>
+	</div>
+</div>
