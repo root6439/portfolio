@@ -14,3 +14,20 @@ body {
 .mat-typography {
   background-color: #e0dfdf;
 }
+
+.section-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  h2 {
+    font-size: 32px;
+    margin: 0;
+    margin: 0 8px;
+  }
+}
+
+.title-line {
+  height: 1px;
+  flex: 1;
+  background: #8769dc;
+}

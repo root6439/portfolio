@@ -1,0 +1,17 @@
+.about {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.personal-infos {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    max-width: 600px;
+    h3 {
+        font-size: 24px;
+    }
+  }
+}
