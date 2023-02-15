@@ -1,0 +1,42 @@
+@import "@angular/material/theming";
+@include mat-core();
+
+$bv-purple: (
+	50: #ffffff,
+	100: #8769dc,
+	200: #8769dc,
+	300: #8769dc,
+	400: #8769dc,
+	500: #8769dc,
+	600: #8769dc,
+	700: #8769dc,
+	800: #8769dc,
+	900: #8769dc,
+	A100: #ffffff,
+	A200: #dde6f3,
+	A400: #8769dc,
+	A700: #8769dc,
+	contrast: (
+		50: $black-87-opacity,
+		100: $black-87-opacity,
+		200: $black-87-opacity,
+		300: $black-87-opacity,
+		400: $black-87-opacity,
+		500: white,
+		600: white,
+		700: white,
+		800: white,
+		900: white,
+		A100: $black-87-opacity,
+		A200: $black-87-opacity,
+		A400: $black-87-opacity,
+		A700: white,
+	),
+);
+
+$primary: mat-palette($bv-purple, 200);
+$accent: mat-palette($mat-orange, 200);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);

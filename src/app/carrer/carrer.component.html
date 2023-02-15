@@ -1,0 +1,57 @@
+<section-title>Carreira</section-title>
+
+<div class="row">
+	<div class="col-5">
+		<h3>Certificados</h3>
+
+		<div *ngFor="let card of certifications" class="medium-card">
+			<img [src]="card.imageUrl" alt="" />
+
+			<div>
+				<h4>
+					{{ card.title }}
+				</h4>
+
+				<p>
+					{{ card.subTitle }}
+				</p>
+
+				<p>Certificado emitido em {{ card.date | certDatePipe }}</p>
+
+				<button type="button">
+					Acessar certificado
+					<img src="./assets/icons/external link.svg" alt="" />
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-2 d-flex justify-content-center">
+		<img src="./assets/images/line.svg" alt="" />
+	</div>
+
+	<div class="col-5">
+		<h3>Experiência</h3>
+
+		<div *ngFor="let card of certifications" class="medium-card">
+			<img [src]="card.imageUrl" alt="" />
+
+			<div>
+				<h4>
+					{{ card.title }}
+				</h4>
+
+				<p>
+					{{ card.subTitle }}
+				</p>
+
+				<p>Certificado emitido em {{ card.date | certDatePipe }}</p>
+
+				<button type="button">
+					Mais informações
+					<img src="./assets/icons/external link.svg" alt="" />
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

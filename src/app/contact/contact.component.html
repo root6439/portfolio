@@ -1,0 +1,38 @@
+<section-title>Entre em contato</section-title>
+
+<form>
+	<div class="row">
+		<mat-form-field class="col-4">
+			<mat-label>Nome</mat-label>
+			<input matInput type="text" />
+		</mat-form-field>
+		<mat-form-field class="col-4">
+			<mat-label>E-mail</mat-label>
+			<input matInput type="text" />
+		</mat-form-field>
+		<mat-form-field class="col-4">
+			<mat-label>Assunto</mat-label>
+			<input matInput type="text" />
+		</mat-form-field>
+	</div>
+
+	<div class="row">
+		<mat-form-field>
+			<mat-label>Mensagem</mat-label>
+			<textarea matInput></textarea>
+		</mat-form-field>
+	</div>
+
+	<div class="d-flex justify-content-end">
+		<button
+			mat-flat-button
+			color="primary"
+			type="submit"
+			[disabled]="formContact.invalid"
+            
+		>
+			Enviar
+		</button>
+		<button mat-button type="reset" color="primary" class="ms-3">Limpar</button>
+	</div>
+</form>
