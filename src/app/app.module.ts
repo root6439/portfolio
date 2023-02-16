@@ -17,6 +17,8 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { FooterComponent } from "./footer/footer.component";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatIconModule } from "@angular/material/icon";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatListModule } from "@angular/material/list";
 
 @NgModule({
 	declarations: [
@@ -40,6 +42,8 @@ import { MatIconModule } from "@angular/material/icon";
 		ReactiveFormsModule,
 		MatSidenavModule,
 		MatIconModule,
+		MatMenuModule,
+		MatListModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],
