@@ -1,56 +1,74 @@
-<header>
-	<div>
-		<button mat-button>Início</button>
-		<button mat-button>Sobre mim</button>
-		<button mat-button>Tecnologias</button>
-		<button mat-button>Projetos</button>
-		<button mat-button>Carreira</button>
-		<button mat-button>Contato</button>
-	</div>
+<div class="top-page">
+	<header>
+		<div class="d-none-mobile">
+			<button mat-button (click)="goTo(home)">Início</button>
+			<button mat-button (click)="goTo(about)">Sobre mim</button>
+			<button mat-button (click)="goTo(tecs)">Tecnologias</button>
+			<button mat-button (click)="goTo(projects)">Projetos</button>
+			<button mat-button (click)="goTo(carrer)">Carreira</button>
+			<button mat-button (click)="goTo(contact)">Contato</button>
+		</div>
 
-	<div>
-		<img
-			src="./assets/icons/dark-mode-icon.svg"
-			alt=""
-			width="24"
-			height="24"
-		/>
-	</div>
-</header>
+		<button mat-icon-button (click)="emit()" class="d-none-desktop">
+			<mat-icon>menu</mat-icon>
+		</button>
 
-<div class="infos-section">
-	<div>
-		<h1>Nicolas Soares Henrique</h1>
-		<h2>Fullstack developer</h2>
+		<div>
+			<img
+				src="./assets/icons/dark-mode-icon.svg"
+				alt=""
+				width="24"
+				height="24"
+			/>
+		</div>
+	</header>
 
-		<h3>
-			Programador, professor e designer com experiência em grandes empresas e
-			diversos certificados adquiridos e projetos criados
-		</h3>
+	<div class="infos-section" #home>
+		<div>
+			<h1>Nicolas Soares Henrique</h1>
+			<h2>Fullstack developer</h2>
 
-		<img src="./assets/icons/Star 1.svg" alt="" />
-		<img src="./assets/icons/Star 1.svg" alt="" />
-		<img src="./assets/icons/Star 1.svg" alt="" />
-		<img src="./assets/icons/Star 1.svg" alt="" />
-		<img src="./assets/icons/Star 1.svg" alt="" />
+			<h3>
+				Programador, professor e designer com experiência em grandes empresas e
+				diversos certificados adquiridos e projetos criados
+			</h3>
 
-		<br />
+			<img src="./assets/icons/Star 1.svg" alt="" />
+			<img src="./assets/icons/Star 1.svg" alt="" />
+			<img src="./assets/icons/Star 1.svg" alt="" />
+			<img src="./assets/icons/Star 1.svg" alt="" />
+			<img src="./assets/icons/Star 1.svg" alt="" />
 
-		<div class="social-logos">
-			<img src="./assets/icons/linkedin-logo.svg" alt="" />
-			<img src="./assets/icons/WhatsApp logo.svg" alt="" />
-			<img src="./assets/icons/instagram logo.svg" alt="" />
-			<img src="./assets/icons/GitHub logo.svg" alt="" />
+			<br />
+
+			<div class="social-logos">
+				<img src="./assets/icons/linkedin-logo.svg" alt="" />
+				<img src="./assets/icons/WhatsApp logo.svg" alt="" />
+				<img src="./assets/icons/instagram logo.svg" alt="" />
+				<img src="./assets/icons/GitHub logo.svg" alt="" />
+			</div>
 		</div>
 	</div>
 </div>
 
-<app-about></app-about>
+<div class="container-lg">
+	<div #about>
+		<app-about></app-about>
+	</div>
 
-<app-technologies></app-technologies>
+	<div #tecs>
+		<app-technologies></app-technologies>
+	</div>
 
-<app-projects></app-projects>
+	<div #projects class="d-none-mobile">
+		<app-projects></app-projects>
+	</div>
 
-<app-carrer></app-carrer>
+	<div #carrer class="d-none-mobile">
+		<app-carrer></app-carrer>
+	</div>
 
-<app-contact></app-contact>
+	<div #contact>
+		<app-contact></app-contact>
+	</div>
+</div>

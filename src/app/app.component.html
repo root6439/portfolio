@@ -1,7 +1,10 @@
-<div class="first-section">
-  <div class="container-lg">
-    <router-outlet></router-outlet>
-  </div>
+<mat-drawer-container>
+	<mat-drawer #drawer>
+		<p>Auto-resizing sidenav</p>
+	</mat-drawer>
 
-  <app-footer></app-footer>
-</div>
+	<div class="content">
+		<app-home (openSideNav)="drawer.toggle()"></app-home>
+		<app-footer></app-footer>
+	</div>
+</mat-drawer-container>

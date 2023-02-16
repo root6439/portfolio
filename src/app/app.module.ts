@@ -14,7 +14,9 @@ import { ContactComponent } from "./contact/contact.component";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { ReactiveFormsModule } from "@angular/forms";
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from "./footer/footer.component";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatIconModule } from "@angular/material/icon";
 
 @NgModule({
 	declarations: [
@@ -25,7 +27,7 @@ import { FooterComponent } from './footer/footer.component';
 		ProjectsComponent,
 		CarrerComponent,
 		ContactComponent,
-  FooterComponent,
+		FooterComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -36,6 +38,8 @@ import { FooterComponent } from './footer/footer.component';
 		MatFormFieldModule,
 		MatInputModule,
 		ReactiveFormsModule,
+		MatSidenavModule,
+		MatIconModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],
