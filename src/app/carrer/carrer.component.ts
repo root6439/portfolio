@@ -13,6 +13,8 @@ interface CardInfo {
 	styleUrls: ["./carrer.component.scss"],
 })
 export class CarrerComponent {
+	isDesktop = window.innerWidth >= 600;
+
 	certifications: CardInfo[] = [
 		{
 			date: new Date(2021, 8),
