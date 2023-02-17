@@ -2,13 +2,15 @@
 
 <div class="projects-cards">
 	<div class="big-card" *ngFor="let card of cardsInfos">
-		<img [src]="card.imageUrl" alt="Imagem do projeto" width="381" height="280" />
+		<h3 class="d-none-desktop">
+			{{ card.title }}
+		</h3>
+		<img [src]="card.imageUrl" alt="Imagem do projeto" class="img-fluid" />
 
 		<div>
-			<h3>
+			<h3 class="d-none-mobile">
 				{{ card.title }}
 			</h3>
-
 			<p>
 				{{ card.description }}
 			</p>

@@ -10,7 +10,7 @@ export class TechnologiesComponent {
 	cardsInfos: CardInfos[] = [
 		{
 			imageUrl: "./assets/images/logos/material.svg",
-			title: "Angular Material",
+			title: "Material",
 			description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
 		},
 		{
