@@ -1,7 +1,7 @@
 <section-title>Tecnologias</section-title>
 
 <div class="tec-cards">
-  <div *ngFor="let item of cardsInfos" class="small-card">
+  <div *ngFor="let item of cardsInfos" class="small-card" [redirectTo]="item.url">
     <img [src]="item.imageUrl" alt="logo" width="80" height="80" />
 
     <h4>{{ item.title }}</h4>
