@@ -18,7 +18,7 @@ export class CarrerComponent {
 	certifications: CardInfo[] = [
 		{
 			date: new Date(2021, 8),
-			imageUrl: "./assets/icons/pluralsight-vector-logo-2022 1.svg",
+			imageUrl: "./assets/icons/udemy-logo.svg",
 			subTitle: "Pluralsight",
 			title: "Angular Fundamentals",
 		},
