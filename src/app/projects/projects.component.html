@@ -5,7 +5,10 @@
 		<h3 class="d-none-desktop">
 			{{ card.title }}
 		</h3>
-		<img [src]="card.imageUrl" alt="Imagem do projeto" class="img-fluid" />
+
+		<video width="400" height="300" controls>
+			<source type="video/mp4" [src]="card.imageUrl" />
+		</video>
 
 		<div>
 			<h3 class="d-none-mobile">

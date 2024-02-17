@@ -7,7 +7,7 @@
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
 		"start": "ng s",
-		"deploy": "ng deploy --base-href=https://root6439.github.io/portfolio/"
+		"deploy": "ng deploy"
 	},
 	"private": true,
 	"dependencies": {

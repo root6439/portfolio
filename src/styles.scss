@@ -79,6 +79,11 @@ body {
 	}
 }
 
+.big-card:hover {
+	box-shadow: 15px 21px 28px -3px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease-in-out;
+}
+
 .medium-card {
 	background-color: #ffffff;
 	border-radius: 8px;
@@ -111,6 +116,13 @@ body {
 	}
 }
 
+video {
+	position: relative;
+	width: 50%;
+	height: 100%;
+}
+
+
 @media screen and (max-width: 600px) {
 	.d-none-mobile {
 		display: none !important;
@@ -131,6 +143,10 @@ body {
 		h3 {
 			text-align: center;
 		}
+	}
+
+	video {
+		width: 100%;
 	}
 }
 

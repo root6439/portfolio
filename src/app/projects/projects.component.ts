@@ -9,41 +9,18 @@ import { CardInfos } from "../shared/models/CardInfos";
 export class ProjectsComponent {
 	cardsInfos: CardInfos[] = [
 		{
-			imageUrl: "./assets/images/checklist confissao.svg",
+			imageUrl: "./assets/videos/checklist_confissao.mp4",
 			title: "Checklist Confissão",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nunc a nibh sollicitudin faucibus. Suspendisse id finibus nisi, ac volutpat sapien. Praesent egestas urna et interdum cursus. Integer luctus lectus metus, et aliquet diam sodales ut. Suspendisse maximus quis metus et congue. Phasellus semper venenatis mauris. Cras eu condimentum orci, a euismod purus. Nunc commodo tellus venenatis semper vulputate.. ",
+				"Projeto criado para facilitar os exames de consciência para católicos. O sistema possui etapas, cada etapa com seus respectivos pecados. O usuário marca os pecados cometidos e no final há a opção de imprimir a lista para levar ao confessionário.",
 			technologiesUsed: ["Angular", "Angular Material"],
 		},
 		{
-			imageUrl: "./assets/images/checklist confissao.svg",
-			title: "Angular",
+			imageUrl: "./assets/videos/gestao_de_gatos.mp4",
+			title: "Gestão de gatinhos",
 			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nunc a nibh sollicitudin faucibus. Suspendisse id finibus nisi, ac volutpat sapien. Praesent egestas urna et interdum cursus. Integer luctus lectus metus, et aliquet diam sodales ut. Suspendisse maximus quis metus et congue. Phasellus semper venenatis mauris. Cras eu condimentum orci, a euismod purus. Nunc commodo tellus venenatis semper vulputate.. ",
-		},
-		{
-			imageUrl: "./assets/images/checklist confissao.svg",
-			title: "Bootstrap",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nunc a nibh sollicitudin faucibus. Suspendisse id finibus nisi, ac volutpat sapien. Praesent egestas urna et interdum cursus. Integer luctus lectus metus, et aliquet diam sodales ut. Suspendisse maximus quis metus et congue. Phasellus semper venenatis mauris. Cras eu condimentum orci, a euismod purus. Nunc commodo tellus venenatis semper vulputate.. ",
-		},
-		{
-			imageUrl: "./assets/images/checklist confissao.svg",
-			title: "Spring Boot",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nunc a nibh sollicitudin faucibus. Suspendisse id finibus nisi, ac volutpat sapien. Praesent egestas urna et interdum cursus. Integer luctus lectus metus, et aliquet diam sodales ut. Suspendisse maximus quis metus et congue. Phasellus semper venenatis mauris. Cras eu condimentum orci, a euismod purus. Nunc commodo tellus venenatis semper vulputate.. ",
-		},
-		{
-			imageUrl: "./assets/images/checklist confissao.svg",
-			title: "NodeJS",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nunc a nibh sollicitudin faucibus. Suspendisse id finibus nisi, ac volutpat sapien. Praesent egestas urna et interdum cursus. Integer luctus lectus metus, et aliquet diam sodales ut. Suspendisse maximus quis metus et congue. Phasellus semper venenatis mauris. Cras eu condimentum orci, a euismod purus. Nunc commodo tellus venenatis semper vulputate.. ",
-		},
-		{
-			imageUrl: "./assets/images/checklist confissao.svg",
-			title: "Karma",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nunc a nibh sollicitudin faucibus. Suspendisse id finibus nisi, ac volutpat sapien. Praesent egestas urna et interdum cursus. Integer luctus lectus metus, et aliquet diam sodales ut. Suspendisse maximus quis metus et congue. Phasellus semper venenatis mauris. Cras eu condimentum orci, a euismod purus. Nunc commodo tellus venenatis semper vulputate.. ",
+				"Sistema CRUD criado para gestão de uma casa de doação de gatos. Foram implementadas uma tela de login, com autenticação usando JWT. Uma tela de pesquisa e outra de cadastro/atualização. A exclusão de gatos é feita diretamente na tela de pesquisa. Foram criadas as tabelas e seus relacionamentos através do TypeORM e os endpoints em ExpressJS.",
+			technologiesUsed: ["Angular", "Angular Material", "ExpressJS", "TypeORM"],
 		},
 	];
 }
