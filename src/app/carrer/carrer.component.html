@@ -5,7 +5,7 @@
 		<h3>Certificados</h3>
 
 		<div *ngFor="let card of certifications" class="medium-card">
-			<img [src]="card.imageUrl" alt="" />
+			<img [src]="card.imageUrl" alt="" height="48" width="48" />
 
 			<div>
 				<h4>
@@ -33,24 +33,22 @@
 	<div [ngClass]="isDesktop ? 'col-5' : 'col-12'">
 		<h3>Experiência</h3>
 
-		<div *ngFor="let card of certifications" class="medium-card">
-			<img [src]="card.imageUrl" alt="" />
+		<div *ngFor="let card of experience" class="medium-card">
+			<img [src]="card.companyLogo" alt="" height="48" width="48" />
 
 			<div>
 				<h4>
-					{{ card.title }}
+					{{ card.position }}
 				</h4>
 
 				<p>
-					{{ card.subTitle }}
+					{{ card.companyName }}
 				</p>
 
-				<p>Certificado emitido em {{ card.date | certDatePipe }}</p>
-
-				<button type="button">
-					Mais informações
-					<img src="./assets/icons/external link.svg" alt="" />
-				</button>
+				<p>
+					{{ card.startDate | certDatePipe }} -
+					{{ card.endDate | certDatePipe }}
+				</p>
 			</div>
 		</div>
 	</div>
