@@ -17,7 +17,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:application",
 					"options": {
-						"outputPath": "dist/test",
+						"outputPath": "dist",
 						"index": "src/index.html",
 						"browser": "src/main.ts",
 						"polyfills": ["zone.js"],
@@ -87,6 +87,9 @@
 						],
 						"scripts": ["bootstrap/dist/js/bootstrap.min.js"]
 					}
+				},
+				"deploy": {
+					"builder": "angular-cli-ghpages:deploy"
 				}
 			}
 		}
