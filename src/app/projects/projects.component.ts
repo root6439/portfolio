@@ -1,10 +1,14 @@
 import { Component } from "@angular/core";
 import { CardInfos } from "../shared/models/CardInfos";
+import { SectionTitle } from "../shared/components/title/title.component";
+import { CommonModule } from "@angular/common";
 
 @Component({
 	selector: "app-projects",
 	templateUrl: "./projects.component.html",
 	styleUrls: ["./projects.component.scss"],
+	standalone: true,
+	imports: [SectionTitle, CommonModule]
 })
 export class ProjectsComponent {
 	cardsInfos: CardInfos[] = [
@@ -25,7 +29,8 @@ export class ProjectsComponent {
 		{
 			imageUrl: "./assets/videos/quadro_kanban.mp4",
 			title: "Quadro Kanban",
-			description: "Este projeto é um sistema de quadro Kanban que permite aos usuários gerenciar suas tarefas de forma visual e eficiente. Ele foi desenvolvido utilizando as tecnologias Angular no frontend, com o auxílio do Angular Material para uma interface elegante e responsiva. No backend, o ExpressJS foi utilizado para criar uma API robusta que interage com o banco de dados, utilizando o TypeORM para mapeamento objeto-relacional.",
+			description:
+				"Este projeto é um sistema de quadro Kanban que permite aos usuários gerenciar suas tarefas de forma visual e eficiente. Ele foi desenvolvido utilizando as tecnologias Angular no frontend, com o auxílio do Angular Material para uma interface elegante e responsiva. No backend, o ExpressJS foi utilizado para criar uma API robusta que interage com o banco de dados, utilizando o TypeORM para mapeamento objeto-relacional.",
 			technologiesUsed: ["Angular", "Angular Material", "ExpressJS", "TypeORM"],
 		},
 	];

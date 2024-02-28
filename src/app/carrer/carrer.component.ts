@@ -1,5 +1,8 @@
 import { Component } from "@angular/core";
 import { Job } from "../shared/models/Job";
+import { SectionTitle } from "../shared/components/title/title.component";
+import { CommonModule } from "@angular/common";
+import { CertificationDatePipe } from "../shared/pipes/CertificationDate.pipe";
 
 interface CardInfo {
 	imageUrl: string;
@@ -12,6 +15,8 @@ interface CardInfo {
 	selector: "app-carrer",
 	templateUrl: "./carrer.component.html",
 	styleUrls: ["./carrer.component.scss"],
+	standalone: true
+	, imports: [SectionTitle, CommonModule, CertificationDatePipe]
 })
 export class CarrerComponent {
 	isDesktop = window.innerWidth >= 600;

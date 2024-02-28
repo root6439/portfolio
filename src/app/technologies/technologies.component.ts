@@ -1,10 +1,15 @@
 import { Component } from "@angular/core";
 import { CardInfos } from "../shared/models/CardInfos";
+import { SectionTitle } from "../shared/components/title/title.component";
+import { RedirectToDirective } from "../shared/directives/RedirectTo.directive";
+import { CommonModule } from "@angular/common";
 
 @Component({
 	selector: "app-technologies",
 	templateUrl: "./technologies.component.html",
 	styleUrls: ["./technologies.component.scss"],
+	standalone: true,
+	imports: [SectionTitle, RedirectToDirective, CommonModule]
 })
 export class TechnologiesComponent {
 	cardsInfos: CardInfos[] = [

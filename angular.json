@@ -3,7 +3,7 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"portfolio": {
+		"test": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
@@ -15,30 +15,29 @@
 			"prefix": "app",
 			"architect": {
 				"build": {
-					"builder": "@angular-devkit/build-angular:browser",
+					"builder": "@angular-devkit/build-angular:application",
 					"options": {
-						"outputPath": "dist",
+						"outputPath": "dist/test",
 						"index": "src/index.html",
-						"main": "src/main.ts",
-						"polyfills": "src/polyfills.ts",
+						"browser": "src/main.ts",
+						"polyfills": ["zone.js"],
 						"tsConfig": "tsconfig.app.json",
 						"inlineStyleLanguage": "scss",
 						"assets": ["src/favicon.ico", "src/assets"],
 						"styles": [
-							"@angular/material/prebuilt-themes/indigo-pink.css",
 							"src/styles.scss",
-							"node_modules/bootstrap/dist/css/bootstrap.min.css",
-							"src/theme.scss"
+							"@angular/material/prebuilt-themes/indigo-pink.css",
+							"bootstrap/dist/css/bootstrap.min.css"
 						],
-						"scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
+						"scripts": ["bootstrap/dist/js/bootstrap.min.js"]
 					},
 					"configurations": {
 						"production": {
 							"budgets": [
 								{
 									"type": "initial",
-									"maximumWarning": "2mb",
-									"maximumError": "5mb"
+									"maximumWarning": "500kb",
+									"maximumError": "1mb"
 								},
 								{
 									"type": "anyComponentStyle",
@@ -46,21 +45,12 @@
 									"maximumError": "4kb"
 								}
 							],
-							"fileReplacements": [
-								{
-									"replace": "src/environments/environment.ts",
-									"with": "src/environments/environment.prod.ts"
-								}
-							],
 							"outputHashing": "all"
 						},
 						"development": {
-							"buildOptimizer": false,
 							"optimization": false,
-							"vendorChunk": true,
 							"extractLicenses": false,
-							"sourceMap": true,
-							"namedChunks": true
+							"sourceMap": true
 						}
 					},
 					"defaultConfiguration": "production"
@@ -68,44 +58,37 @@
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
-            "production": {
-              "buildTarget": "portfolio:build:production"
+						"production": {
+							"buildTarget": "test:build:production"
 						},
-            "development": {
-              "buildTarget": "portfolio:build:development"
+						"development": {
+							"buildTarget": "test:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
 				},
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "buildTarget": "portfolio:build"
+					"options": {
+						"buildTarget": "test:build"
 					}
 				},
 				"test": {
 					"builder": "@angular-devkit/build-angular:karma",
 					"options": {
-						"main": "src/test.ts",
-						"polyfills": "src/polyfills.ts",
+						"polyfills": ["zone.js", "zone.js/testing"],
 						"tsConfig": "tsconfig.spec.json",
-						"karmaConfig": "karma.conf.js",
 						"inlineStyleLanguage": "scss",
 						"assets": ["src/favicon.ico", "src/assets"],
 						"styles": [
+							"src/styles.scss",
 							"@angular/material/prebuilt-themes/indigo-pink.css",
-							"src/styles.scss"
+							"bootstrap/dist/css/bootstrap.min.css"
 						],
-						"scripts": []
+						"scripts": ["bootstrap/dist/js/bootstrap.min.js"]
 					}
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
-        }
+				}
 			}
 		}
-	},
-	"cli": {
-		"analytics": "75667d3e-d9f1-49d2-9d5a-8fa173c3f75d"
 	}
 }

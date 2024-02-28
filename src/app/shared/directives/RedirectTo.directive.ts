@@ -9,6 +9,7 @@ import { DomSanitizer } from "@angular/platform-browser";
 
 @Directive({
 	selector: "[redirectTo]",
+	standalone: true
 })
 export class RedirectToDirective {
 	@Input()
