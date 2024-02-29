@@ -5,20 +5,20 @@
 		<h3>Certificados</h3>
 
 		<div *ngFor="let card of certifications" class="medium-card">
-			<img [src]="card.imageUrl" alt="" height="48" width="48" />
+			<img [src]="card.companyLogo" alt="Logo da empresa" height="48" width="48" />
 
 			<div>
 				<h4>
-					{{ card.title }}
+					{{ card.courseName }}
 				</h4>
 
 				<p>
-					{{ card.subTitle }}
+					{{ card.companyName }}
 				</p>
 
-				<p>Certificado emitido em {{ card.date | certDatePipe }}</p>
+				<p>Certificado emitido em {{ card.endDate| certDatePipe }}</p>
 
-				<button type="button">
+				<button type="button" (click)="openCertification(card.url)">
 					Acessar certificado
 					<img src="./assets/icons/external link.svg" alt="" />
 				</button>
