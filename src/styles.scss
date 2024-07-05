@@ -2,6 +2,13 @@
 
 @use "@angular/material" as mat;
 
+h2,
+h4,
+p {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
 html,
 body {
 	height: 100%;
@@ -121,7 +128,6 @@ video {
 	width: 50%;
 	height: 100%;
 }
-
 
 @media screen and (max-width: 600px) {
 	.d-none-mobile {
