@@ -1,5 +1,4 @@
 import {
-	AfterViewInit,
 	Directive,
 	ElementRef,
 	Input,
@@ -16,8 +15,6 @@ export class RedirectToDirective {
 	redirectTo: string | undefined = "";
 
 	constructor(private el: ElementRef, private sanitizer: DomSanitizer) {
-		console.log(this.redirectTo);
-
 		this.el.nativeElement.addEventListener("click", () => {
 			window.open(
 				this.sanitizer.sanitize(
