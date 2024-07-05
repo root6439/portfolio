@@ -1,13 +1,15 @@
 <section-title>Tecnologias</section-title>
 
 <div class="tec-cards">
-  <div *ngFor="let item of cardsInfos" class="small-card" [redirectTo]="item.url">
-    <img [src]="item.imageUrl" alt="logo" width="80" height="80" />
+	@for(tec of cardsInfos; track $index) {
+	<div class="small-card" [redirectTo]="tec.url">
+		<img [src]="tec.imageUrl" alt="logo" width="80" height="80" />
 
-    <h4>{{ item.title }}</h4>
+		<h4>{{ tec.title }}</h4>
 
-    <p>
-      {{ item.description }}
-    </p>
-  </div>
+		<p>
+			{{ tec.description }}
+		</p>
+	</div>
+	}
 </div>

@@ -1,24 +1,26 @@
 <section-title>Projetos</section-title>
 
 <div class="projects-cards">
-	<div class="big-card" *ngFor="let card of cardsInfos">
+	@for(project of cardsInfos; track $index) {
+	<div class="big-card">
 		<h3 class="d-none-desktop">
-			{{ card.title }}
+			{{ project.title }}
 		</h3>
 
 		<video width="400" height="300" controls>
-			<source type="video/mp4" [src]="card.imageUrl" />
+			<source type="video/mp4" [src]="project.imageUrl" />
 		</video>
 
 		<div>
 			<h3 class="d-none-mobile">
-				{{ card.title }}
+				{{ project.title }}
 			</h3>
 			<p>
-				{{ card.description }}
+				{{ project.description }}
 			</p>
 
-			<p>Tecnologias: {{ card.technologiesUsed }}</p>
+			<p>Tecnologias: {{ project.technologiesUsed }}</p>
 		</div>
 	</div>
+	}
 </div>
