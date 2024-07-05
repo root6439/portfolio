@@ -1,18 +1,13 @@
-import {
-	Directive,
-	ElementRef,
-	Input,
-	SecurityContext,
-} from "@angular/core";
+import { Directive, ElementRef, Input, SecurityContext } from "@angular/core";
 import { DomSanitizer } from "@angular/platform-browser";
 
 @Directive({
 	selector: "[redirectTo]",
-	standalone: true
+	standalone: true,
 })
 export class RedirectToDirective {
 	@Input()
-	redirectTo: string | undefined = "";
+	redirectTo: string = "";
 
 	constructor(private el: ElementRef, private sanitizer: DomSanitizer) {
 		this.el.nativeElement.addEventListener("click", () => {
@@ -20,7 +15,7 @@ export class RedirectToDirective {
 				this.sanitizer.sanitize(
 					SecurityContext.RESOURCE_URL,
 					this.sanitizer.bypassSecurityTrustResourceUrl(this.redirectTo ?? "")
-				) ?? "",
+				),
 				"_blank"
 			);
 		});
