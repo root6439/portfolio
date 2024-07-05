@@ -4,26 +4,34 @@
 	<div [ngClass]="isDesktop ? 'col-5' : 'col-12'">
 		<h3>Certificados</h3>
 
-		<div *ngFor="let card of certifications" class="medium-card">
-			<img [src]="card.companyLogo" alt="Logo da empresa" height="48" width="48" />
+		@for (cert of certifications; track $index) {
+		<div class="medium-card">
+			<img
+				[src]="cert.companyLogo"
+				alt="Logo da empresa"
+				height="48"
+				width="48"
+			/>
 
 			<div>
 				<h4>
-					{{ card.courseName }}
+					{{ cert.courseName }}
 				</h4>
 
 				<p>
-					{{ card.companyName }}
+					{{ cert.companyName }}
 				</p>
 
-				<p>Certificado emitido em {{ card.endDate| certDatePipe }}</p>
+				<p>Certificado emitido em {{ cert.endDate | certDatePipe }}</p>
 
-				<button type="button" (click)="openCertification(card.url)">
+				<button type="button" (click)="openCertification(cert.url)">
 					Acessar certificado
 					<img src="./assets/icons/external link.svg" alt="" />
 				</button>
 			</div>
 		</div>
+
+		}
 	</div>
 
 	<div class="d-none-mobile col-2">
@@ -33,23 +41,25 @@
 	<div [ngClass]="isDesktop ? 'col-5' : 'col-12'">
 		<h3>Experiência</h3>
 
-		<div *ngFor="let card of experience" class="medium-card">
-			<img [src]="card.companyLogo" alt="" height="48" width="48" />
+		@for(exp of experience; track $index) {
+		<div class="medium-card">
+			<img [src]="exp.companyLogo" alt="" height="48" width="48" />
 
 			<div>
 				<h4>
-					{{ card.position }}
+					{{ exp.position }}
 				</h4>
 
 				<p>
-					{{ card.companyName }}
+					{{ exp.companyName }}
 				</p>
 
 				<p>
-					{{ card.startDate | certDatePipe }} -
-					{{ card.endDate | certDatePipe }}
+					{{ exp.startDate | certDatePipe }} -
+					{{ exp.endDate | certDatePipe }}
 				</p>
 			</div>
 		</div>
+		}
 	</div>
 </div>
